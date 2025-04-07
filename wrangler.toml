@@ -1,0 +1,18 @@
+name = "demo-cloudflare-worker"
+compatibility_date = "2023-12-01"
+
+[dev]
+ip = "0.0.0.0"
+port = 80
+local_protocol = "http"
+
+[env.dev.vars]
+MODE = "debug"
+TARGET_UPSTREAM = "https://registry-1.docker.io"
+
+[env.production]
+name = "demo-cloudflare-worker"
+
+[env.production.vars]
+MODE = "production"
+TARGET_UPSTREAM = ""
